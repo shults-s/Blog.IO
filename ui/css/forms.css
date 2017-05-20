@@ -1,0 +1,46 @@
+label {
+    display: inline-block;
+    padding-right: 0.65rem;
+    line-height: 1.55;
+}
+
+textarea,
+input {
+    height: 1.5rem;
+    font-family: "PT Serif";
+    font-size: 1rem;
+    font-weight: 400;
+    background: transparent;
+    border: 0;
+    outline: 0;
+}
+
+input[type = "submit"],
+input[type = "reset"]
+{
+    cursor: pointer;
+}
+
+textarea {
+    min-width: 16rem;
+    max-width: 16rem;
+    min-height: 6rem;
+    max-height: 50vh;
+    line-height: 1.5;
+}
+
+textarea:invalid,
+input:invalid {
+    box-shadow: none;
+}
+
+input[type = "password"],
+input[type = "email"],
+input[type = "date"],
+input[type = "text"],
+textarea {
+    float: right;
+    padding: 0 0.35rem;
+    width: 16rem;
+    border-bottom: 1px dashed black;
+}

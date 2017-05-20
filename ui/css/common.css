@@ -1,0 +1,23 @@
+@import url("/ui/css/fonts.css");
+
+* { margin: 0; padding: 0; }
+
+html {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    font-size: 18px;
+    background: url("/ui/images/background.jpg") fixed;
+    background-size: cover;
+}
+
+body {
+    margin: auto;
+    padding: 2rem;
+    max-width: 48rem;
+    font-family: "PT Serif";
+    text-align: center;
+    background: #FFFFFF;
+    box-shadow: 0 0 0.1rem #305075;
+    border-radius: 0.15rem;
+}

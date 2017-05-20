@@ -1,0 +1,31 @@
+@import url("/ui/css/common.css");
+@import url("/ui/css/forms.css");
+@import url("/ui/css/headers.css");
+@import url("/ui/css/lists.css");
+@import url("/ui/css/links.css");
+
+li {
+    display: block;
+    overflow: hidden;
+    clear: both;
+    margin-bottom: 0.65rem;
+}
+
+li p {
+    color: #CC0000;
+    text-align: center;
+}
+
+li p:last-child {
+    margin-bottom: 0;
+}
+
+li.submit {
+    margin-top: 0.9rem;
+    text-align: right;
+}
+
+input[type = "password"],
+input[type = "email"] {
+    width: 11.5rem;
+}

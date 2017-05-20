@@ -1,0 +1,18 @@
+User-agent: Yandex
+Disallow: /application/
+Disallow: /system/
+Disallow: /ui/
+#Host: blog.io
+
+User-agent: Googlebot
+Disallow: /application/
+Disallow: /system/
+Disallow: /ui/
+
+User-agent: *
+Crawl-delay: 30
+Disallow: /application/
+Disallow: /system/
+Disallow: /ui/
+
+#Sitemap: http://blog.io/sitemap.xml

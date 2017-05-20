@@ -1,0 +1,7 @@
+@import url("/ui/css/login.css");
+
+input[type = "password"],
+input[type = "email"],
+input[type = "text"] {
+    width: 16rem;
+}

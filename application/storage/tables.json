@@ -1,0 +1,262 @@
+{
+    "Users" : {
+        "fields" : [
+            {
+                "name"       : "ID",
+                "type"       : "INT",
+                "attributes" : "AUTO_INCREMENT"
+            },
+            {
+                "name"       : "Name",
+                "type"       : "VARCHAR(32)",
+                "inputType"  : "text",
+                "inputLabel" : "Имя"
+            },
+            {
+                "name"       : "Email",
+                "type"       : "VARCHAR(32)",
+                "inputType"  : "email",
+                "inputLabel" : "E-mail"
+            },
+            {
+                "name"       : "Password",
+                "type"       : "CHAR(60)",
+                "inputType"  : "password",
+                "inputLabel" : "Пароль"
+            },
+            {
+                "name"       : "Privileges",
+                "type"       : "ENUM('u', 'a')",
+                "inputType"  : "text",
+                "inputLabel" : "Привилегии"
+            },
+            {
+                "name"       : "JoinDate",
+                "type"       : "DATE",
+                "inputType"  : "date",
+                "inputLabel" : "Дата регистрации"
+            }
+        ],
+        "primaryKeys"  : "ID",
+        "uniqueFields" : "Email"
+    },
+
+    "Articles" : {
+        "fields" : [
+            {
+                "name"       : "ID",
+                "type"       : "INT",
+                "attributes" : "AUTO_INCREMENT"
+            },
+            {
+                "name"       : "Title",
+                "type"       : "VARCHAR(255)",
+                "inputType"  : "text",
+                "inputLabel" : "Заголовок"
+            },
+            {
+                "name"       : "Text",
+                "type"       : "TEXT",
+                "inputType"  : "textarea",
+                "inputLabel" : "Текст статьи"
+            },
+            {
+                "name"       : "WriteDate",
+                "type"       : "DATE",
+                "inputType"  : "date",
+                "inputLabel" : "Дата написания"
+            }
+        ],
+        "primaryKeys" : "ID"
+    },
+
+    "Categories" : {
+        "fields" : [
+            {
+                "name"       : "ID",
+                "type"       : "INT",
+                "attributes" : "AUTO_INCREMENT"
+            },
+            {
+                "name"       : "Name",
+                "type"       : "VARCHAR(32)",
+                "inputType"  : "text",
+                "inputLabel" : "Название"
+            }
+        ],
+        "primaryKeys" : "ID"
+    },
+
+    "Commentaries" : {
+        "fields" : [
+            {
+                "name"       : "ID",
+                "type"       : "INT",
+                "attributes" : "AUTO_INCREMENT"
+            },
+            {
+                "name"       : "Text",
+                "type"       : "VARCHAR(255)",
+                "inputType"  : "text",
+                "inputLabel" : "Текст"
+            },
+            {
+                "name"       : "WriteDate",
+                "type"       : "DATE",
+                "inputType"  : "date",
+                "inputLabel" : "Дата написания"
+            }
+        ],
+        "primaryKeys" : "ID"
+    },
+
+    "UserArticle" : {
+        "fields" : [
+            {
+                "name"       : "UserID",
+                "type"       : "INT",
+                "inputType"  : "text",
+                "inputLabel" : "ID пользователя"
+            },
+            {
+                "name"       : "ArticleID",
+                "type"       : "INT",
+                "inputType"  : "text",
+                "inputLabel" : "ID статьи"
+            }
+        ],
+        "primaryKeys" : "UserID, ArticleID",
+        "foreignKeys" : [
+            {
+                "field"        : "UserID",
+                "table"        : "Users",
+                "foreignField" : "ID"
+            },
+            {
+                "field"        : "ArticleID",
+                "table"        : "Articles",
+                "foreignField" : "ID"
+            }
+        ]
+    },
+
+    "UserCommentary" : {
+        "fields" : [
+            {
+                "name"       : "UserID",
+                "type"       : "INT",
+                "inputType"  : "text",
+                "inputLabel" : "ID пользователя"
+            },
+            {
+                "name"       : "CommentaryID",
+                "type"       : "INT",
+                "inputType"  : "text",
+                "inputLabel" : "ID комментария"
+            }
+        ],
+        "primaryKeys" : "UserID, CommentaryID",
+        "foreignKeys" : [
+            {
+                "field"        : "UserID",
+                "table"        : "Users",
+                "foreignField" : "ID"
+            },
+            {
+                "field"        : "CommentaryID",
+                "table"        : "Commentaries",
+                "foreignField" : "ID"
+            }
+        ]
+    },
+
+    "UserCategory" : {
+        "fields" : [
+            {
+                "name"       : "UserID",
+                "type"       : "INT",
+                "inputType"  : "text",
+                "inputLabel" : "ID пользователя"
+            },
+            {
+                "name"       : "CategoryID",
+                "type"       : "INT",
+                "inputType"  : "text",
+                "inputLabel" : "ID категории"
+            }
+        ],
+        "primaryKeys" : "UserID, CategoryID",
+        "foreignKeys" : [
+            {
+                "field"        : "UserID",
+                "table"        : "Users",
+                "foreignField" : "ID"
+            },
+            {
+                "field"        : "CategoryID",
+                "table"        : "Categories",
+                "foreignField" : "ID"
+            }
+        ]
+    },
+
+    "ArticleCategory" : {
+        "fields" : [
+            {
+                "name"       : "ArticleID",
+                "type"       : "INT",
+                "inputType"  : "text",
+                "inputLabel" : "ID статьи"
+            },
+            {
+                "name"       : "CategoryID",
+                "type"       : "INT",
+                "inputType"  : "text",
+                "inputLabel" : "ID категории"
+            }
+        ],
+        "primaryKeys" : "ArticleID, CategoryID",
+        "foreignKeys" : [
+            {
+                "field"        : "ArticleID",
+                "table"        : "Articles",
+                "foreignField" : "ID"
+            },
+            {
+                "field"        : "CategoryID",
+                "table"        : "Categories",
+                "foreignField" : "ID"
+            }
+        ]
+    },
+
+    "ArticleCommentary" : {
+        "fields" : [
+            {
+                "name"       : "ArticleID",
+                "type"       : "INT",
+                "inputType"  : "text",
+                "inputLabel" : "ID статьи"
+            },
+            {
+                "name"       : "CommentaryID",
+                "type"       : "INT",
+                "inputType"  : "text",
+                "inputLabel" : "ID комментарния"
+            }
+        ],
+        "primaryKeys" : "ArticleID, CommentaryID",
+        "foreignKeys" : [
+            {
+                "field"        : "ArticleID",
+                "table"        : "Articles",
+                "foreignField" : "ID"
+            },
+            {
+                "field"        : "CommentaryID",
+                "table"        : "Commentaries",
+                "foreignField" : "ID"
+            }
+        ]
+    }
+}

@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "PT Serif";
+  font-style: normal;
+  font-weight: 400;
+  src: local("PT Serif"), url("/ui/fonts/PTSerif.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "PT Serif";
+  font-style: normal;
+  font-weight: 700;
+  src: local("PT Serif Bold"), url("/ui/fonts/PTSerifBold.ttf") format("ttf");
+}

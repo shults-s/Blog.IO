@@ -1,0 +1,85 @@
+@import url("/ui/css/common.css");
+@import url("/ui/css/headers.css");
+@import url("/ui/css/links.css");
+@import url("/ui/css/paragraphs.css");
+@import url("/ui/css/articles.css");
+
+body {
+    padding: 0;
+    max-width: 53rem;
+    width: 53rem;
+    border-radius: 0;
+}
+
+header h1 {
+    float: left;
+    margin: auto;
+}
+
+h1 a.control {
+    vertical-align: 0;
+}
+
+header nav {
+    float: right;
+    margin: auto;
+    font-size: 1rem;
+}
+
+nav a {
+    margin-left: 1.5rem;
+}
+
+header a.control,
+footer a.control,
+footer p {
+    color: #FFFFFF;
+}
+
+header,
+footer {
+    padding: 0 2.5rem 0;
+    width: 48rem;
+}
+
+footer p:first-child {
+    float: left;
+    margin: auto;
+    margin-left: 0;
+}
+
+footer p:last-child {
+    float: right;
+    margin: auto;
+}
+
+footer p:first-child,
+header h1 {
+    margin-left: 0.5rem;
+}
+
+footer p:last-child,
+header nav {
+    margin-right: 0.5rem;
+}
+
+header, footer {
+    display: flex;
+    overflow: hidden;
+    clear: both;
+    height: 6.5rem;
+    box-shadow: -1px 0 0 #305075, 1px 0 0 #305075;
+    background: #305075;
+}
+
+@media (max-device-width: 720px) {
+    header nav a.control,
+    footer a.control,
+    footer p {
+        font-size: 2rem;
+    }
+
+    header h1 a.control {
+        font-size: 2.5rem;
+    }
+}

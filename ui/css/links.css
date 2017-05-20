@@ -1,0 +1,22 @@
+a {
+    color: #305075;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a.control,
+a.header {
+    text-decoration: none;
+    color: #000000;
+}
+
+/*a.control:hover,*/
+a.header:hover {
+    color: #305075;
+}
+
+h1 a.control {
+    vertical-align: 0.167rem; /* 0.223 */
+}

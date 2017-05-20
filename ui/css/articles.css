@@ -1,0 +1,45 @@
+section,
+aside {
+    margin: 0 auto;
+    padding: 1rem 0;
+    width: 48rem;
+    text-align: left;
+    border-bottom: 1px dotted #BEBEBE;
+}
+
+section:first-of-type {
+    margin-top: 1rem;
+}
+
+section:last-of-type {
+    margin-bottom: 1rem;
+    border: 0;
+}
+
+section h2 {
+    margin-top: -0.1rem;
+    margin-bottom: 0.3rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+article {
+    overflow: hidden;
+    clear: both;
+}
+
+article img {
+    float: left;
+    margin-right: 1.15rem;
+    width: 15rem;
+}
+
+article p:last-of-type {
+    margin-top: 0.7rem;
+    color: #555555;
+}
+
+article p:first-of-type {
+    text-align: justify;
+}

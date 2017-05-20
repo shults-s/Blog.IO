@@ -1,0 +1,48 @@
+@import url("/ui/css/common.css");
+@import url("/ui/css/headers.css");
+@import url("/ui/css/links.css");
+@import url("/ui/css/paragraphs.css");
+@import url("/ui/css/articles.css");
+@import url("/ui/css/main.css");
+
+section h2 {
+    margin-top: 0;
+    margin-bottom: 1.35rem;
+}
+
+article p:last-of-type,
+article p {
+    margin-top: 0.8rem;
+    line-height: 1.5;
+    color: #000000;
+    text-align: justify;
+}
+
+article p:first-of-type {
+    margin-top: -0.223rem;
+    color: #555555;
+}
+
+article img {
+    margin-right: 1rem;
+    width: auto;
+    height: 9.17rem;
+}
+
+aside {
+    margin-bottom: 1rem;
+    padding: 0;
+    border: 0;
+}
+
+aside h2 {
+    margin-bottom: 0.5rem;
+}
+
+aside section:first-of-type {
+    margin-top: 0;
+}
+
+aside p.single {
+    padding: 1rem 0 1rem;
+}
